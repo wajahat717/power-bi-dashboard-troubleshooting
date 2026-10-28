@@ -1,0 +1,93 @@
+// =====================================================================
+// Project Cost Dashboard - DAX measures
+// Put all measures in one table named "_Measures" (Enter data, empty table).
+// Model: fact_project_cost -> dim_date (gl_date_key), dim_organization,
+//        dim_expenditure_type, dim_project. All relationships single
+//        direction, many-to-one, dimension to fact.
+// Mark dim_date as the date table on calendar_date.
+// =====================================================================
+
+// ---------- Base measures ----------
+Burdened Cost =
+SUM ( fact_project_cost[burdened_cost] )
+
+Raw Cost =
+SUM ( fact_project_cost[raw_cost] )
+
+Burden Amount =
+[Burdened Cost] - [Raw Cost]
+
+Burden % =
+DIVIDE ( [Burden Amount], [Raw Cost] )
+
+Cost Lines =
+COUNTROWS ( fact_project_cost )
+
+Active Projects =
+DISTINCTCOUNT ( fact_project_cost[project_key] )
+
+// ---------- Billable ----------
+Billable Cost =
+CALCULATE ( [Burdened Cost], fact_project_cost[billable_flag] = "Y" )
+
+Non-Billable Cost =
+CALCULATE ( [Burdened Cost], fact_project_cost[billable_flag] = "N" )
+
+Billable % =
+DIVIDE ( [Billable Cost], [Burdened Cost] )
+
+// ---------- Time intelligence ----------
+Cost MTD =
+TOTALMTD ( [Burdened Cost], dim_date[calendar_date] )
+
+Cost YTD =
+TOTALYTD ( [Burdened Cost], dim_date[calendar_date] )
+
+Cost Previous Month =
+CALCULATE ( [Burdened Cost], DATEADD ( dim_date[calendar_date], -1, MONTH ) )
+
+Cost MoM % =
+DIVIDE ( [Burdened Cost] - [Cost Previous Month], [Cost Previous Month] )
+
+Cost Same Period LY =
+CALCULATE ( [Burdened Cost], SAMEPERIODLASTYEAR ( dim_date[calendar_date] ) )
+
+Cost YoY % =
+DIVIDE ( [Burdened Cost] - [Cost Same Period LY], [Cost Same Period LY] )
+
+Cost Rolling 3M =
+CALCULATE (
+    [Burdened Cost],
+    DATESINPERIOD ( dim_date[calendar_date], MAX ( dim_date[calendar_date] ), -3, MONTH )
+)
+
+// ---------- Ranking and share ----------
+Project Rank =
+IF (
+    HASONEVALUE ( dim_project[project_name] ),
+    RANKX ( ALLSELECTED ( dim_project[project_name] ), [Burdened Cost], , DESC, DENSE )
+)
+
+Category Share % =
+DIVIDE (
+    [Burdened Cost],
+    CALCULATE ( [Burdened Cost], ALLSELECTED ( dim_expenditure_type ) )
+)
+
+Region Share % =
+DIVIDE (
+    [Burdened Cost],
+    CALCULATE ( [Burdened Cost], ALLSELECTED ( dim_organization ) )
+)
+
+Avg Cost per Project =
+DIVIDE ( [Burdened Cost], [Active Projects] )
+
+// ---------- Labels for cards ----------
+MoM Arrow =
+VAR c = [Cost MoM %]
+RETURN
+    IF ( ISBLANK ( c ), BLANK (), IF ( c >= 0, "▲ ", "▼ " ) & FORMAT ( ABS ( c ), "0.0%" ) & " vs last month" )
+
+Data As Of =
+"Data as of " & FORMAT ( MAX ( dim_date[calendar_date] ), "dd mmm yyyy" )

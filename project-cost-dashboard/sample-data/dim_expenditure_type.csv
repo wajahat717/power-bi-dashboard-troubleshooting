@@ -1,0 +1,23 @@
+expenditure_type_key,expenditure_type_name,expenditure_category_name
+1,Field Technician,Labor
+2,Project Manager,Labor
+3,Engineer,Labor
+4,Overtime Labor,Labor
+5,Disposal Fee,Disposal
+6,Landfill Fee,Disposal
+7,Recycling Fee,Disposal
+8,Freight,Transportation
+9,Truck Hire,Transportation
+10,Fuel Surcharge,Transportation
+11,Safety Supplies,Supplies
+12,Containers,Supplies
+13,Labels and Forms,Supplies
+14,Equipment Rental,Equipment
+15,Vehicle Usage,Equipment
+16,Subcontract Labor,Subcontractors
+17,Specialist Services,Subcontractors
+18,Airfare,Travel & Expenses
+19,Hotel,Travel & Expenses
+20,Meals,Travel & Expenses
+21,Admin Overhead,Overhead
+-1,Unknown,Unknown

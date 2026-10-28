@@ -1,0 +1,14 @@
+organization_key,organization_name,location_name,region_name
+1,Branch 101,Branch 101 Operations,North Region
+2,Branch 102,Branch 102 Operations,North Region
+3,Branch 103,Branch 103 Operations,North Region
+4,Branch 201,Branch 201 Operations,South Region
+5,Branch 202,Branch 202 Operations,South Region
+6,Branch 203,Branch 203 Operations,South Region
+7,Branch 301,Branch 301 Operations,East Region
+8,Branch 302,Branch 302 Operations,East Region
+9,Branch 303,Branch 303 Operations,East Region
+10,Branch 401,Branch 401 Operations,West Region
+11,Branch 402,Branch 402 Operations,West Region
+12,Branch 403,Branch 403 Operations,West Region
+-1,Unknown,Unknown,Unknown

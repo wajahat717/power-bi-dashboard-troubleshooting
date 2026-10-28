@@ -1,0 +1,61 @@
+project_key,project_number,project_name,industry,owning_organization_key,project_type,size_factor
+5001,PRJ-5001,Client A1 - Site 9,Healthcare,1,Non-Routine
+5002,PRJ-5002,Client B1 - Site 7,Healthcare,9,Routine
+5003,PRJ-5003,Client C1 - Site 3,Life Sciences,1,Routine
+5004,PRJ-5004,Client D1 - Site 6,Manufacturing,4,Routine
+5005,PRJ-5005,Client E1 - Site 6,Retail,6,Routine
+5006,PRJ-5006,Client F1 - Site 8,Retail,12,Routine
+5007,PRJ-5007,Client G1 - Site 2,Retail,7,Routine
+5008,PRJ-5008,Client H1 - Site 6,Retail,10,Routine
+5009,PRJ-5009,Client I1 - Site 4,Education,1,Routine
+5010,PRJ-5010,Client J1 - Site 7,Education,2,Routine
+5011,PRJ-5011,Client K1 - Site 3,Education,6,Routine
+5012,PRJ-5012,Client L1 - Site 2,Retail,5,Non-Routine
+5013,PRJ-5013,Client M1 - Site 4,Healthcare,12,Routine
+5014,PRJ-5014,Client N1 - Site 9,Healthcare,11,Non-Routine
+5015,PRJ-5015,Client O1 - Site 4,Manufacturing,1,Routine
+5016,PRJ-5016,Client P1 - Site 4,Retail,2,Non-Routine
+5017,PRJ-5017,Client Q1 - Site 8,Life Sciences,11,Non-Routine
+5018,PRJ-5018,Client R1 - Site 3,Healthcare,5,Non-Routine
+5019,PRJ-5019,Client S1 - Site 7,Retail,5,Routine
+5020,PRJ-5020,Client T1 - Site 9,Life Sciences,3,Routine
+5021,PRJ-5021,Client U1 - Site 3,Healthcare,2,Non-Routine
+5022,PRJ-5022,Client V1 - Site 7,Life Sciences,2,Non-Routine
+5023,PRJ-5023,Client W1 - Site 5,Retail,9,Routine
+5024,PRJ-5024,Client X1 - Site 9,Education,2,Non-Routine
+5025,PRJ-5025,Client Y1 - Site 7,Healthcare,5,Routine
+5026,PRJ-5026,Client Z1 - Site 5,Retail,12,Routine
+5027,PRJ-5027,Client A2 - Site 5,Retail,2,Non-Routine
+5028,PRJ-5028,Client B2 - Site 3,Retail,6,Non-Routine
+5029,PRJ-5029,Client C2 - Site 6,Life Sciences,10,Routine
+5030,PRJ-5030,Client D2 - Site 5,Healthcare,6,Routine
+5031,PRJ-5031,Client E2 - Site 2,Manufacturing,10,Non-Routine
+5032,PRJ-5032,Client F2 - Site 9,Healthcare,2,Routine
+5033,PRJ-5033,Client G2 - Site 3,Education,9,Non-Routine
+5034,PRJ-5034,Client H2 - Site 4,Retail,7,Non-Routine
+5035,PRJ-5035,Client I2 - Site 5,Life Sciences,12,Non-Routine
+5036,PRJ-5036,Client J2 - Site 9,Life Sciences,8,Routine
+5037,PRJ-5037,Client K2 - Site 6,Manufacturing,2,Non-Routine
+5038,PRJ-5038,Client L2 - Site 4,Manufacturing,10,Routine
+5039,PRJ-5039,Client M2 - Site 4,Manufacturing,1,Routine
+5040,PRJ-5040,Client N2 - Site 9,Healthcare,2,Routine
+5041,PRJ-5041,Client O2 - Site 9,Healthcare,4,Non-Routine
+5042,PRJ-5042,Client P2 - Site 8,Healthcare,10,Routine
+5043,PRJ-5043,Client Q2 - Site 2,Manufacturing,4,Non-Routine
+5044,PRJ-5044,Client R2 - Site 7,Life Sciences,7,Non-Routine
+5045,PRJ-5045,Client S2 - Site 2,Manufacturing,11,Routine
+5046,PRJ-5046,Client T2 - Site 4,Healthcare,2,Routine
+5047,PRJ-5047,Client U2 - Site 7,Healthcare,3,Routine
+5048,PRJ-5048,Client V2 - Site 8,Retail,2,Routine
+5049,PRJ-5049,Client W2 - Site 1,Manufacturing,9,Routine
+5050,PRJ-5050,Client X2 - Site 8,Healthcare,8,Routine
+5051,PRJ-5051,Client Y2 - Site 7,Manufacturing,3,Routine
+5052,PRJ-5052,Client Z2 - Site 5,Life Sciences,8,Non-Routine
+5053,PRJ-5053,Client A3 - Site 8,Healthcare,9,Routine
+5054,PRJ-5054,Client B3 - Site 9,Manufacturing,1,Non-Routine
+5055,PRJ-5055,Client C3 - Site 8,Retail,1,Non-Routine
+5056,PRJ-5056,Client D3 - Site 2,Healthcare,9,Routine
+5057,PRJ-5057,Client E3 - Site 4,Life Sciences,11,Routine
+5058,PRJ-5058,Client F3 - Site 4,Retail,10,Non-Routine
+5059,PRJ-5059,Client G3 - Site 7,Retail,2,Non-Routine
+5060,PRJ-5060,Client H3 - Site 4,Education,5,Routine
